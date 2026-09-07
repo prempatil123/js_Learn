@@ -1,0 +1,12 @@
+{
+  "name": "js_Learn",
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [3000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
