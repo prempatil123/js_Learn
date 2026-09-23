@@ -19,7 +19,7 @@ let symbolValue = Symbol("unique"); // Symbol is used to create unique identifie
 //bigint => for larger numbers
 
 console.log(typeof name); // "string"
-console.log(typeof undefined);// "undefined"
+console.log(typeof undefinedValue); // "undefined"
 console.log(typeof nullValue); // "object" (this is a known quirk in JavaScript)
 console.log(typeof symbolValue); // "symbol"
 console.log(typeof hobbies); // "object" (arrays are objects in JavaScript)
