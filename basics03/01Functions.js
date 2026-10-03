@@ -55,7 +55,7 @@ console.log(loginUserMessage("prem")) // we can access the return value of the f
 
 
 function calculateCartPrice(val1,val2,...prices){ //val1 and val2 are normal parameters and ...prices is rest operator which takes all the arguments passed in the function call and stores them in an array called prices
-    return pries
+    return prices
 }
 console.log(calculateCartPrice(20,30,40,50)) // this is called rest operator it takes all the arguments passed in the function call and stores them in an array called prices
  
@@ -63,10 +63,44 @@ const user = {
     username: "prem",
     price: 20,} //here we have created an object called user with properties username and price
 
-    function handleObjects(anyobject){
+    function handleObjects(anyobject){ // here we have created a function called handleObject which takes an object as an argument and destructures it to get the properties username and price
         console.log(`username is ${anyobject.username} 
-            and price is ${anyobject.price}`)
+            and price is ${anyobject.prices}`) // here we are accessing the properties of the object using dot notation
 
     }
-    handleObject(user) // we can pass the object as an argument
+    //handleObject(user) // we can pass the object as an argument
     //  to the function and access its properties using dot notation
+    // or we can directly destructure the object in the function parameter list like this
+    handleObjects({
+        username : "prem",
+        price : 399
+    });
+
+    const myNewArray = [200 , 300, 400, 500]
+    function returnSecondValue(getArray){
+        return getArray[3] // we can access the array elements using index
+    }
+    console.log(returnSecondValue(myNewArray)) // we can pass the array as an argument to the function and access its elements using index
+    //or we can directly destructure the array in the function parameter list like this
+    //console.log(returnSecondValue([100,200,300,400])) // we can pass the array as an argument to the function and access its elements using index
+    // 1. We build the machine. We leave a little slot at the top called "fruit".
+function makeSmoothie(fruit) { 
+  return `Here is your ${fruit} smoothie! 🥤`;
+}
+
+// 2. We turn on the machine and drop our "Argument" (the fruit) inside!
+console.log(makeSmoothie("Apple")); 
+console.log(makeSmoothie("Banana"));
+// another way to put this is also 
+// 1. We build the machine. We leave a little slot at the top called "fruit".
+function makeSmoothie(fruit) { 
+  console.log("Here is your " + fruit + " smoothie! 🥤");
+}
+
+// 2. We turn on the machine and drop our "Argument" (the fruit) inside!
+makeSmoothie("Apple"); 
+makeSmoothie("Banana");
+///
+
+
+
